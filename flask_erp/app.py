@@ -15,7 +15,6 @@ def before_request():
     """
     Opens a new database session before each request.
     """
-    print('init session')
     db.session()
 
 @app.after_request
@@ -25,7 +24,6 @@ def after_request(response):
     """
     db.session.commit()
     db.session.remove()
-    print('close session')
     return response
 
 app.register_blueprint(book_blueprint)
