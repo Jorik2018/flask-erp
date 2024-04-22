@@ -4,7 +4,7 @@ from flask_erp.expose import todo_blueprint, user_blueprint
 from flask_erp.util.db import db
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:123456@localhost:5432/flask_development"
+app.config["SQLALCHEMY_DATABASE_URI"] = ""
 db.init_app(app)
 
 with app.app_context():
